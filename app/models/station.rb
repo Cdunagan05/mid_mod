@@ -1,5 +1,5 @@
 class Station
-  attr_reader: :station_name,
+  attr_reader :station_name,
                :street_address,
                :fuel_type_code,
                :distance,

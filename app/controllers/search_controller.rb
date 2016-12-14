@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
   def index
 
-    @stations = NrelService.station
+    @stations = Nrel.stations
     # binding.pry
     # conn = Faraday.new(:url => "https://api.data.gov") do |faraday|
     #   faraday.request  :url_encoded
