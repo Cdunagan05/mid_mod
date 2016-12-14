@@ -10,6 +10,7 @@ describe "NREL SERVICES" do
     # And I click "Locate"
     click_on "Locate"
 
+    
 
     # Then I should be on page "/search" with parameters visible in the url
     # Then I should see a list of the 10 closest stations within 6 miles sorted by distance

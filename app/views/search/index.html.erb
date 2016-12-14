@@ -1,0 +1,7 @@
+<% @parsed.each do |station| %>
+  <h1>Station name: <%= station["station_name"] %></h1>
+  <h1><%= station["street_address"] %></h1>
+  <h1><%= station["fuel_type_code"] %></h1>
+  <h1><%= station["distance"] %> miles</h1>
+  <h1><%= station["access_days_time"] %></h1>
+<% end %>

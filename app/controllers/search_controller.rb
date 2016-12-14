@@ -6,8 +6,8 @@ class SearchController < ApplicationController
       faraday.adapter  Faraday.default_adapter
     end
 
-    response = conn.get "/nrel/alt-fuel-stations/v1/nearest.json?api_key=ENV['API_KEY']&location=80203&fuel_type=ELEC,LPG&limit=10"
+    response = conn.get "/nrel/alt-fuel-stations/v1/nearest.json?api_key=#{ENV['API_KEY']}&location=80203&fuel_type=ELEC,LPG&limit=10"
+    @parsed = JSON.parse(response.body)["fuel_stations"]
     binding.pry
-    response.body
   end
 end
